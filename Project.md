@@ -42,3 +42,29 @@ scoobydoo <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/
     ##   blue_falcon = col_logical()
     ## )
     ## ℹ Use `spec()` for the full column specifications.
+
+``` r
+library(ggplot2)
+```
+
+``` r
+ggplot(data=scoobydoo, aes(x=monster_real, fill=monster_real)) +
+    geom_bar(colour="black", stat="Count") +
+    guides(fill=FALSE)
+```
+
+    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
+    ## "none")` instead.
+
+![](Project_files/figure-gfm/bar%20graph-1.png)<!-- -->
+
+``` r
+ggplot(data=scoobydoo, aes(x=arrested, fill=arrested)) +
+    geom_bar(colour="black", stat="Count") +
+    guides(fill=FALSE)
+```
+
+    ## Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
+    ## "none")` instead.
+
+![](Project_files/figure-gfm/bar%20graph%20#2-1.png)<!-- -->
